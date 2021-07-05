@@ -47,6 +47,6 @@ for word in out1:
  result = word in ticker
  if result == True:
   match[word] = result
-print(match)
+print(match,'these companys are in the s&p500')
 
 
