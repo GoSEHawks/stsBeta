@@ -36,6 +36,18 @@ for t in text: # filter out the data with our blacklist
         output += '{} '.format(t)
         
 # out put a clear clean and filterd data to our terminal.
-print(output)
-
-
+#print(output)
+out1 = (output.split())
+with open('snp500.csv') as f:
+ csvf = csv.reader(f)
+ ticker = []
+ name = []
+ for row in csvf:
+  ticker.append(row[0])
+  name.append(row[1])
+match = {}
+for word in out1:
+ result = word in ticker
+ if result == True:
+  match[word] = result
+print(match,'these companys are in the s&p500')
