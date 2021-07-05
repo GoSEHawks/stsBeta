@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 
+
 url = 'https://www.google.com/finance?tab=ne' # the site we are scrapeing
 res = requests.get(url)
 html_page = res.content
