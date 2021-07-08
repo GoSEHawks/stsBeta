@@ -35,6 +35,8 @@ for t in text: # filter out the data with our blacklist
         output += '{} '.format(t)
 
 # out put a clear clean and filterd data to our te
+# runs news headliners against the s&p500 list
+explaintxt='Analysis against financial news site and the S&P500 listing\n'
 out1 = (output.split())
 with open('snp500.csv') as f:
  csvf = csv.reader(f)
@@ -48,6 +50,5 @@ for word in out1:
  result = word in ticker
  if result == True:
   match[word] = result
-print(match,'these companys are in the s&p500')
-
+print(explaintxt, match,'\nTHESE MENTIONED COMPANIES ARE IN THE S&P500')
 
