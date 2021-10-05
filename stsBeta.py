@@ -1,9 +1,9 @@
-
 import re
 import requests
 from bs4 import BeautifulSoup
 import csv
-
+import pos as p
+import neg as n
 
 url = 'https://www.google.com/finance?tab=ne' # the site we are scrapeing
 res = requests.get(url)
